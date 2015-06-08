@@ -40,7 +40,7 @@ nmat2mft(nmat, ifn, 120, tempo, 4, 4); % temp.txt
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2: Convert text file to MIDI
 % 	OBS: PLATFORM DEPENDENT
-if strcmp(computer,'PCWIN')
+if  (strcmp(computer,'PCWIN') || strcmp(computer,'PCWIN64'))
     mft2mf(ifn,ofn);
     delete(ifn);
     clear mex
@@ -51,7 +51,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3: play MIDI
 % 	OBS: PLATFORM DEPENDENT
-if strcmp(computer,'PCWIN')
+if (¨strcmp(computer,'PCWIN') || strcmp(computer,'PCWIN64'))
    fprintf(1,'Checking for MIDI player... ');
    player=setmidiplayer;
    if ~isempty(player)==1;

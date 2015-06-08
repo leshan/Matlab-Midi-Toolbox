@@ -18,7 +18,7 @@ function midiplayer = setmidiplayer(fullpath)
 %© Part of the MIDI Toolbox, Copyright © 2004, University of Jyvaskyla, Finland
 % See License.txt
 
-if strcmp(computer,'PCWIN')
+if (strcmp(computer,'PCWIN') || strcmp(computer,'PCWIN64'))
 else
    disp('function designed for setting up MIDI player in Windows.'); return
 end
